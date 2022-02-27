@@ -5,7 +5,7 @@
       "path": "/etc/hostname",
       "mode": 420,
       "overwrite": true,
-      "contents": { "source": "data:,core1" }
+      "contents": { "source": "data:,grover" }
     }]
   }
 }
