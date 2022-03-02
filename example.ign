@@ -55,15 +55,6 @@
       {
         "enabled": true,
         "name": "containerd.service"
-      },
-      {
-        "dropins": [
-          {
-            "contents": "[Service]\n# Override Execstart in main unit\nExecStart=\n# Add new Execstart with `-` prefix to ignore failure\nExecStart=-/usr/sbin/agetty --autologin admin --noclear %I $TERM\nTTYVTDisallocate=no\n",
-            "name": "autologin-core.conf"
-          }
-        ],
-        "name": "[email protected]"
       }
     ]
   }
