@@ -55,6 +55,11 @@
       {
         "enabled": true,
         "name": "containerd.service"
+      },
+      {
+        "contents": "[Unit]\nDescription=NGINX example\nAfter=docker.service\nRequires=docker.service\n[Service]\nTimeoutStartSec=0\nExecStartPre=-/usr/bin/docker rm --force nginx1\nExecStart=/usr/bin/docker run --name nginx1 --pull always --net host docker.io/nginx:1\nExecStop=/usr/bin/docker stop busybox1\nRestart=always\nRestartSec=5s\n[Install]\nWantedBy=multi-user.target\n",
+        "enabled": true,
+        "name": "nginx.service"
       }
     ]
   }
